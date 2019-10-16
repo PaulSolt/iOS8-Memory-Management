@@ -44,20 +44,24 @@ ViewController *newVC = nil;
 //	newVC.myFriend; // accessing a property (that has an instance variable) using dot syntax
 	
 	// Car and Person are local variables
-    Car *car = [[Car alloc] init];			// car: 1
+//    Car *car = [[Car alloc] init];			// car: 1
+	Car *car = [[[Car alloc] init] autorelease];			// car: 1
     
-    Person *person = [[Person alloc] init]; // person: 1
+    Person *person = [[[Person alloc] init] autorelease]; // person: 1
     person.car = car;       // person owns car  // car: 2
 //    [car release];			// Transfering ownership to the person  // car: 1
 	
-	// We don't want the dealership driving our car unannounced
-	car = nil; // Protecting our future self from using the car
+	person.car = car;
 	
-	[car driveToOhio]; // no-op (nothing happens)
+	
+	// We don't want the dealership driving our car unannounced
+//	car = nil; // Protecting our future self from using the car
+	
+//	[car driveToOhio]; // no-op (nothing happens)
 	
 	// We have a memory leak!!!!
 	
-	[person release]; // Both person and car are cleaned up (memory is returned to system)
+	//[person release]; // Both person and car are cleaned up (memory is returned to system)
 	
 	// person: 0
 	// car: 0

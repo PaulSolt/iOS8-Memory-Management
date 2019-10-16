@@ -24,6 +24,11 @@
 //	return [[[Car alloc] initWithYear:year] autorelease];
 //}
 
+- (void)driveToOhio {
+	
+	
+}
+
 - (void)dealloc {
 	NSLog(@"Car.dealloc");
 	
