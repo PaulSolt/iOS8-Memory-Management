@@ -27,7 +27,7 @@
     [car release];
     
     // CRASH
-    person.car = car;
+    // person.car = car;
     
 }
 
