@@ -10,4 +10,24 @@
 
 @implementation Car
 
+//[Date date]; // current date
+//[Car car];
+
+// Naming convention (rule) that you name your Class functions using the type
+// Car -> car
+
++ (Car *)car {
+	return [[[Car alloc] init] autorelease];
+}
+
+//+ (Car *)carWithYear:(int)year {
+//	return [[[Car alloc] initWithYear:year] autorelease];
+//}
+
+- (void)dealloc {
+	NSLog(@"Car.dealloc");
+	
+	[super dealloc];
+}
+
 @end

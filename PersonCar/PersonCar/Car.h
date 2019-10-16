@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Car : NSObject
 
++ (Car *)car;
+
 @end
 
 NS_ASSUME_NONNULL_END

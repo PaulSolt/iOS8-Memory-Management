@@ -26,9 +26,13 @@
 	return self;
 }
 
-
 - (void)dealloc {
+	NSLog(@"Person.dealloc");
     [_car release];
+	_car = nil;
+	[_name release];
+	_name = nil;
+	
     [super dealloc];
 }
 

@@ -8,14 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Car.h"
-NS_ASSUME_NONNULL_BEGIN
 
 @interface Person : NSObject
 
+// Public Properties
+@property (copy) NSString *name;
 @property (retain) Car *car;
 
 - (instancetype)initWithCar:(Car *)car;
 
 @end
-
-NS_ASSUME_NONNULL_END
