@@ -20,12 +20,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    Car *car = [[Car alloc] init];
+    Car *car = [[Car alloc] init];			// car: 1
     
-    Person *person = [[Person alloc] init];
-    person.car = car;       // person owns car
-    [car release];
-    
+    Person *person = [[Person alloc] init]; // person: 1
+    person.car = car;       // person owns car  // car: 2
+    [car release];			// Transfering ownership to the person  // car: 1
+	
+	
+	//	car = nil; // Protect my future self
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     // CRASH
     // person.car = car;
     

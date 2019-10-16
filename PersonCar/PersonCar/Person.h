@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (retain) Car *car;
 
+- (instancetype)initWithCar:(Car *)car;
+
 @end
 
 NS_ASSUME_NONNULL_END
